@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 def NG():
     """The main program for Number Guesser"""
 
@@ -54,6 +55,7 @@ def NG():
 
     # Start the game.
     guessing()
+
 
 def TTT():
     # Inspiration code from https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/#
@@ -172,9 +174,14 @@ def TTT():
         else:
             print("Thank you for playing")
 
+
 # Define Rock Paper Scissor 1 Player. Used for later recusion.
 def RPS_1P():
     """The play loop for single player Rock, Paper, Scissors."""
+
+    # Initialize replay with a default value.
+    replay = ""
+
     # Obtain players choice.
     player = input("Choose Rock, Paper, or Scissor\n")
 
@@ -221,6 +228,9 @@ def RPS_1P():
 def RPS_2P():
     """The play loop for two player Rock, Paper, Scissors."""
     print("HONOR RULES!\nNO PEAKING!\n")
+
+    # Initialize replay with a default value.
+    replay = ""
 
     # Obtain first players choice.
     player = input("Player 1, Choose Rock, Paper, or Scissor\n")
@@ -279,6 +289,7 @@ def RPS():
 
     elif players == "TWO":
         RPS_2P()
+
 
 def hangman():
     # Create dictionary of words from text file, keys == length of word, values == words of that length; all upper case.
@@ -380,20 +391,24 @@ def HM():
     window.destroy()
     hangman()
 
+
 # Launch Tic Tac Toe upon button press
 def TicTacToe():
     window.destroy()
     TTT()
+
 
 # Launch Rock, Paper, Sciccor upon button press
 def rps():
     window.destroy()
     RPS()
 
+
 # Launch Number Guesser upon button press
 def NumGuess():
     window.destroy()
     NG()
+
 
 # Create the main window
 window = tk.Tk()
